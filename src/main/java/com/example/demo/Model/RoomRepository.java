@@ -1,4 +1,6 @@
 package com.example.demo.Model;
 
-public interface RoomRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface RoomRepository extends CrudRepository {
 }
