@@ -11,5 +11,5 @@ import java.util.List;
 public interface ReservationRepository extends CrudRepository<Reservation, Long> {
 //    @Query("SELECT ROOM_ID FROM RESERVATION r WHERE r.RES_DATE = '2023-08-22'")
 //    public Iterable<Reservation> findReservationsByRes_Date();
-    public List<Reservation> findByResDate(Date date);
+     List<Reservation> findByResDate(Date date);
 }
