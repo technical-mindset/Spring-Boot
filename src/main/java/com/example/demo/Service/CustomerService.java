@@ -1,7 +1,7 @@
 package com.example.demo.Service;
 
 import com.example.demo.Model.Customer;
-import com.example.demo.Model.CustomerRepository;
+import com.example.demo.DAO.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,5 +57,8 @@ public class CustomerService {
             return "Deleted !!";
         }
         return "Doesn't exists";
+    }
+    public List<Customer> getCusByGender(String gender){
+       return this.customerRepository.findByGender(gender);
     }
 }

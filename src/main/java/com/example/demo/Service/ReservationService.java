@@ -1,7 +1,7 @@
 package com.example.demo.Service;
 
 import com.example.demo.Model.Reservation;
-import com.example.demo.Model.ReservationRepository;
+import com.example.demo.DAO.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,13 +15,16 @@ public class ReservationService {
     private ReservationRepository reservationRepository;
 
     public List<Reservation> getReservations(){
-        return this.reservationRepository.findAll();
-    }
-    public List<Reservation> getReservation(){
         List<Reservation> list = new ArrayList<>();
-        Iterable<Reservation> itr = this.reservationRepository.findReservationByRes_Date(new Date());
+        Iterable<Reservation> itr = this.reservationRepository.findAll();
         itr.forEach(list::add);
+
         return list;
     }
+    public List<Reservation> getResByDate(Date date){
+        return this.reservationRepository.findByResDate(date);
+    }
+
+
 
 }

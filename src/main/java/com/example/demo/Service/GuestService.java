@@ -1,7 +1,7 @@
 package com.example.demo.Service;
 
 import com.example.demo.Model.Guest;
-import com.example.demo.Model.GuestRepository;
+import com.example.demo.DAO.GuestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;

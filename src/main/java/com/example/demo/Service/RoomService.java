@@ -3,7 +3,7 @@ package com.example.demo.Service;
 
 
 import com.example.demo.Model.Room;
-import com.example.demo.Model.RoomRepository;
+import com.example.demo.DAO.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

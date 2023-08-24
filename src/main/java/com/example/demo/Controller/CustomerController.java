@@ -15,13 +15,17 @@ public class CustomerController {
     private CustomerService cs;
 
 
-    @GetMapping
-    public List<Customer> getCustomers(){
-         return this.cs.getCustomers();
-    }
+//    @GetMapping
+//    public List<Customer> getCustomers(){
+//         return this.cs.getCustomers();
+//    }
     @GetMapping("/{id}")
     public Customer getCustomer(@PathVariable("id") long id){
          return this.cs.getCustomer(id);
+    }
+    @GetMapping("/{gender}")
+    public List<Customer> byGender(@PathVariable("gender") String gender){
+        return this.cs.getCusByGender(gender);
     }
     @PostMapping
     public String addCustomer(@RequestBody Customer customer){
