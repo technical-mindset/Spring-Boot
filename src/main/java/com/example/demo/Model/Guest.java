@@ -34,25 +34,7 @@ public class Guest {
 
 
 
-    public Guest(long id, String firstName, String lastName,
-                 String emailAddress, String address, String country, String state, String phoneNumber) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.emailAddress = emailAddress;
-        Address = address;
-        this.country = country;
-        this.state = state;
-        this.phoneNumber = phoneNumber;
-    }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
