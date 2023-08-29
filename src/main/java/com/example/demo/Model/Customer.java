@@ -4,6 +4,13 @@ package com.example.demo.Model;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
+import lombok.*;
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 
 @Entity
 @Table(name = "Customer")
@@ -18,24 +25,6 @@ public class Customer {
     private String gender;
     @Column(name = "AGE")
     private int age;
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public Customer(long id, String name, String gender, int age) {
-        this.id = id;
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-    }
-
-    public Customer() {
-    }
 
     public long getId() {
         return id;
