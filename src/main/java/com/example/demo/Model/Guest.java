@@ -1,6 +1,14 @@
 package com.example.demo.Model;
 
 import jakarta.persistence.*;
+import lombok.*;
+
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+@ToString
 
 @Entity
 @Table(name = "GUEST")
@@ -24,8 +32,7 @@ public class Guest {
     @Column(name = "PHONE_NUMBER")
     private String phoneNumber;
 
-    public Guest() {
-    }
+
 
     public Guest(long id, String firstName, String lastName,
                  String emailAddress, String address, String country, String state, String phoneNumber) {
