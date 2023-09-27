@@ -7,6 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+    //topic is runtime entity
 public class Topic {
     private long id;
     private String name;
